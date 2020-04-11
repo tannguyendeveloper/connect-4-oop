@@ -420,11 +420,6 @@ class ConnectFourGame {
     boardContainer.append(winnerScreen);
   }
 
-  removeMessage() {
-    const winnerScreen = document.querySelector(`#${this.id} .message-container`);
-    winnerScreen.remove();
-  }
-
   renderTieMessage() {
     const _this = this;
     const boardContainer = document.querySelector(`#${this.id} .board-container`);
@@ -445,6 +440,12 @@ class ConnectFourGame {
     tieScreen.append(tieMessage, playAgainBtn);
     boardContainer.append(tieScreen);
   }
+
+  removeMessages() {
+    const winnerScreen = document.querySelector(`#${this.id} .message-container`);
+    winnerScreen.remove();
+  }
+
 
   /**
    * Disable the column
