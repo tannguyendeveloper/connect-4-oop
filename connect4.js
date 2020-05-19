@@ -22,7 +22,6 @@ class ConnectFourGame {
     this.board = [];
     this.gamePiecesPlaced = 0;
     this.totalGamePieces = this.width * this.height;
-
     this.init();
   }
 
@@ -141,6 +140,7 @@ class ConnectFourGame {
   turnIndicator(player) {
     
     const turnIndicator = document.createElement('div');
+    turnIndicator.id = 'turn-indicator-player-${player}'
     turnIndicator.classList.add('turn-indicator', `player${player}`);
     
     const playerTitle = document.createElement('h2');
@@ -468,7 +468,7 @@ class ConnectFourGame {
     }, 0);
 
     // If the number of pieces in the column is less than the height  
-    if (piecesInColumn < this.height) {
+    if (piecesInColumn < matrix.length) {
       // row to add piece = height - 1 to account for 0 index;
       let rowToAddPiece = this.height - piecesInColumn - 1;
       return rowToAddPiece;

@@ -220,7 +220,7 @@ button#start-game-btn {
   box-shadow: 1px 1px 1px rgba(0,0,0,.5);
 }
 
-button.reset-game-btn {
+button#reset-game-btn {
   font-family: 'Nunito', sans-serif;
   background: linear-gradient(156deg, rgba(218,0,0,1) 0%, rgba(83,0,0,1) 100%);
   color: #ffffff;
@@ -232,7 +232,7 @@ button.reset-game-btn {
   border-radius: 2em;
 }
 
-button#start-game-btn:hover, button.reset-game-btn:hover {
+button#start-game-btn:hover, button#reset-game-btn:hover {
   color: rgba(255,185,30,1);
   box-shadow: 3px 3px 3px rgba(0,0,0,.5);
 }
