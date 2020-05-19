@@ -109,7 +109,9 @@ export default function GameBoard(gameBoard) {
 
     function checkForTie(matrix) {
         return matrix.every(row => {
-            return Boolean(matrix[row])
+            return row.every(col => {
+                return Boolean(col);
+            })
         })
     }
     return {
