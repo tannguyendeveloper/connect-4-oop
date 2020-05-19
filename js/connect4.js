@@ -89,7 +89,7 @@ class ConnectFourGame {
 
     handleIsTie() {
         const endGameMessage = "It's a Tie";
-        this.renderEndGameScreen(appendGameScreen);
+        this.renderEndGameScreen(endGameMessage);
         this.disableGame();
     }
 
@@ -101,7 +101,6 @@ class ConnectFourGame {
 
     renderEndGameScreen(message) {
         const resetGameBtn = UiElements.createButton('reset-game-btn', 'Play Again!', this.handleRestartGame.bind(this))
-        console.log(resetGameBtn)
         const endGameScreen = UiElements.endGameScreen(message, resetGameBtn);
         this.UiElements.boardContainer.append(endGameScreen);
         this.UiElements.endGameScreen = endGameScreen;
